@@ -1,0 +1,30 @@
+name: Deploy to Local IIS
+
+on:
+  push:
+    branches:
+      - master
+
+jobs:
+  build-deploy:
+    runs-on: self-hosted
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      - name: Restore dependencies
+        run: dotnet restore
+
+      - name: Build
+        run: dotnet build --configuration Release --no-restore
+
+      - name: Take app offline
+        run: echo "Site under maintenance" > d:\mydotnetproject2\bin\release\net8.0\publish\app_offline.htm
+
+      - name: Publish to IIS folder
+        run: dotnet publish -c Release -o "d:\mydotnetproject2\bin\release\net8.0\publish"
+
+      - name: Bring app online
+        run: del d:\mydotnetproject2\bin\release\net8.0\publish\app_offline.htm
+
