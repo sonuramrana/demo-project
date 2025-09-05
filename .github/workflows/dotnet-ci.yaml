@@ -20,11 +20,11 @@ jobs:
         run: dotnet build --configuration Release --no-restore
 
       - name: Take app offline
-        run: echo "Site under maintenance" > d:\mydotnetproject2\bin\release\net8.0\publish\app_offline.htm
+        run: echo "Site under maintenance" > d:\demo-project\bin\release\net8.0\publish\app_offline.htm
 
       - name: Publish to IIS folder
-        run: dotnet publish -c Release -o "d:\mydotnetproject2\bin\release\net8.0\publish"
+        run: dotnet publish -c Release -o "d:\demo-project\bin\release\net8.0\publish"
 
       - name: Bring app online
-        run: del d:\mydotnetproject2\bin\release\net8.0\publish\app_offline.htm
+        run: del d:\demo-project\bin\release\net8.0\publish\app_offline.htm
 
