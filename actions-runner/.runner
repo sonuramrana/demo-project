@@ -1,0 +1,11 @@
+﻿{
+  "agentId": 2,
+  "agentName": "DST-12",
+  "poolId": 1,
+  "poolName": "Default",
+  "serverUrl": "https://pipelinesghubeus8.actions.githubusercontent.com/8rvr4YsUj2L9KKOWSceRWdVUF3kKwaMr04lvuan9obX4BZ9N56/",
+  "gitHubUrl": "https://github.com/sonuramrana/demo-project",
+  "workFolder": "_work",
+  "useV2Flow": true,
+  "serverUrlV2": "https://broker.actions.githubusercontent.com/"
+}

@@ -1,0 +1,12 @@
+﻿{
+  "repositoryName": "sonuramrana/demo-project",
+  "pipelineDirectory": "demo-project",
+  "workspaceDirectory": "demo-project\\demo-project",
+  "repositories": {
+    "sonuramrana/demo-project": {
+      "repositoryPath": "demo-project\\demo-project",
+      "lastRunOn": "09/05/2025 16:10:02 +05:30"
+    }
+  },
+  "lastRunOn": "09/05/2025 16:14:00 +05:30"
+}
